@@ -1,0 +1,78 @@
+[
+  {
+    "id": "rct-sample-size",
+    "domain": "clinical trials",
+    "tags": ["RCT", "sample size", "power"],
+    "text": "Randomized controlled trials require adequate statistical power, typically 80-90%, to detect clinically meaningful effects. Small sample sizes increase the risk of Type II errors (false negatives) and produce wide confidence intervals. A trial with fewer than 100 participants per arm should be interpreted cautiously unless the effect size is very large."
+  },
+  {
+    "id": "rct-blinding",
+    "domain": "clinical trials",
+    "tags": ["RCT", "blinding", "bias"],
+    "text": "Double-blind RCTs, where neither participants nor investigators know treatment assignment, minimize performance and detection bias. Open-label trials are more susceptible to placebo effects and observer bias. Intention-to-treat analysis (analyzing all randomized participants regardless of protocol adherence) is the gold standard for RCT reporting."
+  },
+  {
+    "id": "rct-endpoints",
+    "domain": "clinical trials",
+    "tags": ["endpoints", "surrogate", "primary outcome"],
+    "text": "Primary endpoints should be pre-registered and clinically meaningful. Surrogate endpoints (e.g. biomarker levels instead of survival) may not translate to real-world benefit. Composite endpoints can inflate apparent efficacy if driven by less important components. P-hacking risk increases with multiple secondary endpoints."
+  },
+
+  {
+    "id": "ml-data-leakage",
+    "domain": "machine learning",
+    "tags": ["data leakage", "overfitting", "train-test split"],
+    "text": "Data leakage occurs when information from the test set influences model training, artificially inflating performance metrics. Common sources include feature scaling fitted on the full dataset, temporal leakage in time-series data, and duplicate samples split across train and test. Results from leaked pipelines rarely generalize to production."
+  },
+  {
+    "id": "ml-benchmarks",
+    "domain": "machine learning",
+    "tags": ["benchmarks", "baselines", "comparison"],
+    "text": "ML papers should compare against strong, relevant baselines — not just outperform weak or outdated ones. State-of-the-art claims require comparison on standard benchmarks with the same evaluation protocol. Results on a single dataset may not generalize; performance across multiple datasets is a stronger signal of robustness."
+  },
+  {
+    "id": "ml-metrics",
+    "domain": "machine learning",
+    "tags": ["AUC", "accuracy", "F1", "imbalanced"],
+    "text": "Accuracy is misleading on imbalanced datasets. AUC-ROC measures discrimination ability but can be optimistic with class imbalance — AUC-PR (precision-recall) is more informative in those cases. F1 score balances precision and recall. For medical ML, sensitivity and specificity thresholds matter more than aggregate metrics."
+  },
+
+  {
+    "id": "epi-causality",
+    "domain": "epidemiology",
+    "tags": ["causality", "correlation", "confounding"],
+    "text": "Observational studies establish association, not causation. Confounding variables — factors correlated with both exposure and outcome — are the primary threat to causal inference. Methods like propensity score matching, instrumental variables, and difference-in-differences can strengthen causal claims but cannot fully replace randomization."
+  },
+  {
+    "id": "epi-selection-bias",
+    "domain": "epidemiology",
+    "tags": ["selection bias", "healthy worker effect", "survivorship"],
+    "text": "Selection bias occurs when study participants differ systematically from the target population. The healthy worker effect (employed people are healthier than average) biases occupational studies. Survivorship bias affects studies of long-term outcomes. Loss to follow-up can introduce bias if dropout is related to the exposure or outcome."
+  },
+
+  {
+    "id": "gwas-multiple-testing",
+    "domain": "genomics",
+    "tags": ["GWAS", "multiple testing", "p-value threshold"],
+    "text": "Genome-wide association studies (GWAS) test millions of variants simultaneously, requiring stringent significance thresholds (p < 5×10⁻⁸) to control the family-wise error rate. Standard p < 0.05 thresholds are insufficient. Replication in independent cohorts is essential before claiming a genetic association is real."
+  },
+  {
+    "id": "genomics-diversity",
+    "domain": "genomics",
+    "tags": ["population diversity", "generalizability", "ancestry"],
+    "text": "Most genomic studies are heavily biased toward European-ancestry populations, limiting generalizability. Polygenic risk scores derived from European GWAS perform poorly in African, East Asian, and South Asian populations. Results from non-diverse cohorts should be interpreted cautiously when making population-wide claims."
+  },
+
+  {
+    "id": "meta-publication-bias",
+    "domain": "meta-analysis",
+    "tags": ["publication bias", "funnel plot", "file drawer"],
+    "text": "Publication bias — the tendency to publish positive results over null results — inflates effect size estimates in meta-analyses. Funnel plot asymmetry, Egger's test, and trim-and-fill methods are used to detect and adjust for publication bias. A meta-analysis of biased primary studies will produce a biased pooled estimate."
+  },
+  {
+    "id": "meta-heterogeneity",
+    "domain": "meta-analysis",
+    "tags": ["heterogeneity", "I²", "random effects"],
+    "text": "Heterogeneity measures how much variation across studies exceeds what is expected by chance. I² > 50% indicates substantial heterogeneity, suggesting a single pooled effect size may be misleading. Random-effects models account for between-study variance but do not eliminate the problem. Subgroup analyses can identify sources of heterogeneity."
+  }
+]

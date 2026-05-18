@@ -1,4 +1,3 @@
-// components/TranslationPanel.jsx
 import { useState } from 'react'
 import { LANGUAGES } from '../lib/languages.js'
 import { claudeComplete, parseJSON, TRANSLATE_PROMPT, buildTranslatePrompt } from '../lib/anthropic.js'

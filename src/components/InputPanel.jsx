@@ -1,4 +1,3 @@
-// components/InputPanel.jsx
 import { useState, useRef } from 'react'
 import { extractTextFromPDF } from '../lib/pdfExtract.js'
 

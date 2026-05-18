@@ -1,4 +1,3 @@
-// components/KnowledgeBaseEditor.jsx
 import { useState, useEffect } from "react";
 import { invalidateKBCache } from "../lib/rag.js";
 import SystemErrorBanner from "./SystemErrorBanner.jsx";
@@ -22,7 +21,7 @@ const EMPTY_ENTRY = { id: "", domain: DOMAINS[0], tags: "", text: "" };
 
 export default function KnowledgeBaseEditor() {
   const [entries, setEntries] = useState([]);
-  const [editing, setEditing] = useState(null); // index being edited, or 'new'
+  const [editing, setEditing] = useState(null);
   const [form, setForm] = useState(EMPTY_ENTRY);
   const [saved, setSaved] = useState(false);
   const [filter, setFilter] = useState("all");

@@ -1,4 +1,3 @@
-// components/Settings.jsx
 import ApiKeyInput from "./ApiKeyInput.jsx";
 
 export default function Settings({
@@ -156,11 +155,9 @@ export default function Settings({
           <div style={s.section}>
             <div style={s.sectionLabel}>APPEARANCE</div>
             <div style={s.themeRow}>
-              <button style={s.themeBtn(!isLight)} onClick={() => onThemeChange("dark")}>
-                <span>🌙</span> Dark
+              <button style={s.themeBtn(!isLight)} onClick={() => onThemeChange("dark")}> Dark
               </button>
-              <button style={s.themeBtn(isLight)} onClick={() => onThemeChange("light")}>
-                <span>☀️</span> Light
+              <button style={s.themeBtn(isLight)} onClick={() => onThemeChange("light")}> Light
               </button>
             </div>
           </div>

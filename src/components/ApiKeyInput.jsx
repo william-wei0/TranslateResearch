@@ -1,7 +1,3 @@
-// components/ApiKeyInput.jsx
-// Single row. Shows status when idle, becomes an input when clicked.
-// The saved key is never rendered — only a masked indicator.
-
 import { useState, useRef } from 'react'
 
 export default function ApiKeyInput({ value, onChange, placeholder = 'sk-...' }) {
@@ -15,7 +11,6 @@ export default function ApiKeyInput({ value, onChange, placeholder = 'sk-...' })
   function startEditing() {
     setEditing(true)
     setDraft('')
-    // focus after render
     setTimeout(() => inputRef.current?.focus(), 0)
   }
 
@@ -142,7 +137,7 @@ export default function ApiKeyInput({ value, onChange, placeholder = 'sk-...' })
       ) : (
         <>
           <span style={s.statusText}>
-            {saved ? '✓ Saved' : isSet ? '• • • • • • • • • • • •' : 'Click to add key'}
+            {saved ? 'Saved' : isSet ? '• • • • • • • • • • • •' : 'Click to add key'}
           </span>
           {isSet && !saved && (
             <button style={s.iconBtn(true)} onClick={handleClear} title="Clear key">✕</button>

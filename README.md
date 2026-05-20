@@ -1,7 +1,7 @@
 
 # TranslateResearch
 
-A small desktop app for summarizing research papers using Anthropic and OpenAI, with multilingual translation, a light-weight RAG system, and persistent summary history. Built with Electron, React, and the Anthropic and OpenAI APIs. Supports PDF text extraction.
+A small desktop app for summarizing research papers using Anthropic and OpenAI with multilingual translation, a light-weight RAG system, and persistent summary history. Built with Electron, React, and Anthropic and OpenAI APIs. Supports text extraction directly from PDFs.
 
 <img width="1909" height="871" alt="TranslateResearch" src="https://github.com/user-attachments/assets/a145f470-93ed-4995-afd5-44bf71e03896" />
 
